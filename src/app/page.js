@@ -1,95 +1,71 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client";
 
-export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+import styles from './page.module.css';
+import Assento from './components/Assento';
+import BotaoCompra from './components/BotaoCompra';
+import ListaDeAssentos from './components/ListaDeAssentos';
+import { useState, useEffect } from 'react';
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+export default function CinemaPage() {
+    const [filme, setFilme] = useState(null);
+    const [selecionados, setSelecionados] = useState([]);
+
+    useEffect(() => {
+        fetch('/api/filme')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Erro na resposta da API: ${response.statusText}`);
+                }
+                return response.json();
+            })
+            .then(data => setFilme(data))
+            .catch(err => {
+                console.error("Erro ao buscar dados do filme:", err);
+                alert("Erro ao buscar dados do filme. Verifique o console para mais detalhes.");
+            });
+    }, []);
+    
+    const selecionarAssento = (numero) => {
+        if (!selecionados.includes(numero)) {
+            setSelecionados([...selecionados, numero]);
+        } else {
+            setSelecionados(selecionados.filter(n => n !== numero));
+        }
+    };
+
+    if (!filme) return <p>Carregando...</p>;
+
+    return (
+        <div className={styles.container}>
+            <header className={styles.header}>
+                <h1 className={styles.title}>{filme.titulo}</h1>
+                <h2 className={styles.subtitle}>{filme.horario}</h2>
+            </header>
+            
+            <section className={styles.infoSection}>
+                <h2>Sinopse do filme</h2>
+                <p>{filme.sinopse}</p>
+                <h3>Data de lançamento</h3>
+                <p>{filme.dataLancamento}</p>
+                <h3>Direção</h3>
+                <p>{filme.diretor}</p>
+            </section>
+
+            <div className={styles.assentosContainer}>
+                <ListaDeAssentos 
+                    assentos={filme.assentos}
+                    selecionarAssento={selecionarAssento} 
+                    selecionados={selecionados} 
+                />
+            </div>
+
+            <BotaoCompra 
+                preco={filme.preco} 
+                totalSelecionados={selecionados.length} 
+                className={styles.botaoCompra}
             />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+    );
 }
+
+
