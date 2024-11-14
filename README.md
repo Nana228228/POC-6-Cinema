@@ -34,28 +34,22 @@ npm run dev
 
 <pre>
 Estrutura inicial
-├── app/ 
-/components
-  ├── 
-  ├── 
-  ├── 
-  └──     
-/fonts
-  └── global.css
-/layout.js
-/page.js
-/public
-  └── favicon.ico    
-├── .eslintrc.json
-├── .gitignore
-├── jsconfig.json
-├── next.config.mjs
-├── package-lock.json
-├── package.json
-├── postcss.config.mjs
-├── README.md
-└── tailwind.config.js
-</pre>
+└── app
+    ├── api
+    │   └── filme
+    │       └── route.js
+    ├── components
+    │   ├── Assento.js
+    │   ├── BotaoCompra.js
+    │   └── ListaDeAssentos.js
+    ├── favicon.ico
+    ├── fonts
+    │   ├── GeistMonoVF.woff
+    │   └── GeistVF.woff
+    ├── globals.css
+    ├── layout.js
+    ├── page.js
+    └── page.module.css
 
 <h2 id="">page.js</h2>
 A página do projeto implementa uma interface para exibir informações sobre um filme e permitir a **seleção de assentos** no cinema.
