@@ -8,7 +8,7 @@
       - [Assento.js](#)
       - [BotaoCompra.js](#)
       - [ListaDeAssetos.js](#)
-   * [Page.js](#page)
+   * [Page.js](#cinemapage)
    * [Estilos ](#styles)
    * [Layout](#layout)
    * [Autores](#autores)
@@ -77,7 +77,7 @@ export default function Assento({ assento, selecionado, onSelect }) {
 }
 
 ```
-Pularemos a explicação de o que são componentes e como declará-los por motivos de concisão. Se precisar estudar o tema, acesse: . <br>
+Pularemos a explicação de o que são componentes e como declará-los por motivos de concisão. Para saber mais, acesse as POCs anteriores. <br>
 O componente recebe três props:<br>
 `assento`: Representa o assento em si, incluindo detalhes como o número e disponibilidade.<br>
 `selecionado`: Indica se o assento foi clicado pelo usuário.<br>
@@ -92,7 +92,7 @@ O componente recebe três props:<br>
   * `selecionado ? styles.selecionado : ''`: Verifica se o assento foi selecionado pelo usuário e aplica um estilo diferente (a classe `.selecionado` dentro do arquivo `styles`).<br>
 
 <h2 id="ListaDeAssentos.js">ListaDeAssentos.js</h2>
-O componente ListaDeAssentos recebe dados (p. ex. quais assentos estão disponíveis) da API interna e passa essas informações para o componente Assento.js. Além disso, exibe os assentos de forma organizada. 
+O componente ListaDeAssentos recebe dados (p. ex. quais assentos estão disponíveis) da API interna e passa essas informações para o componente Assento.js. Além disso, exibe os assentos de forma organizada e a legenda. 
 
 ```js
 //1) Importações
@@ -165,7 +165,7 @@ Nota-se que o arquivo é o único que faz uso dos hooks (`useState` e `useEffect
 manipulação do DOM. 
 
 
-<h3>Função principal CinemaPage() </h3>
+<h3 id="cinemapage">Função principal CinemaPage() </h3>
 
 <h4> Estados </h4>
 
