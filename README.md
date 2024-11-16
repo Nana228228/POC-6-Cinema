@@ -81,7 +81,7 @@ Pularemos a explicação de o que são componentes e como declará-los por motiv
 O componente recebe três props:<br>
 `assento`: Representa o assento em si, incluindo detalhes como o número e disponibilidade.<br>
 `selecionado`: Indica se o assento foi clicado pelo usuário.<br>
-`onSelect`: É uma função que será chamada quando o assento for clicado.<br>
+`onSelect`: É uma função que será chamada quando o assento for clicado e cujo nome é uma palavra arbitrária<br>
 `<div>`: É a "caixa" que representa o assento.<br>
 
 `className`: Define o estilo visual do assento usando if ternário (expressão condicional):<br>
