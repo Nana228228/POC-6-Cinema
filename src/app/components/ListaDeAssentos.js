@@ -15,11 +15,6 @@ export default function ListaDeAssentos({ assentos, selecionarAssento, seleciona
             />
           ))}
         </div>
-        <div className={styles.legenda}>
-          <span className={styles.livre}>● livre</span>
-          <span className={styles.selecionado}>● selecionado</span>
-          <span className={styles.indisponivel}>● indisponível</span>
-        </div>
       </div>
     );
 }

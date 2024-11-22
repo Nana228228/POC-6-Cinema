@@ -1,9 +1,10 @@
+
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -18,21 +19,36 @@
 }
 
 .subtitle {
-  font-size: 1.5rem;
+  font-size: 1.rem;
   margin: 0;
 }
 
-.infoSection {
-  text-align: left;
-  margin-bottom: 20px;
-  max-width: 600px;
+.article {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin: 0;
+  margin-bottom: 50px;
 }
 
+
+
 .assentosContainer {
+  flex: 3;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 20px;
+  justify-content: center;
+  margin-top: 1%;
+}
+
+.infoSection {
+  flex: 2;
+  text-align: left;
+  max-width: 800px;
+  margin-left: -5%;
+  margin-top: 2%;
 }
 
 .grid {
@@ -40,11 +56,12 @@
   grid-template-columns: repeat(8, 1fr);
   gap: 10px;
   margin-bottom: 20px;
+  justify-content: center;
 }
 
 .assento {
-  width: 40px;
-  height: 40px;
+  width: 28px;
+  height: 28px;
   border-radius: 5px;
   background-color: var(--seat-available);
   cursor: pointer;
@@ -54,11 +71,13 @@
   transition: background-color 0.3s;
 }
 
-.selecionado {
+
+
+.assento.selecionado {
   background-color: var(--seat-selected);
 }
 
-.indisponivel {
+.assento.indisponivel {
   background-color: var(--seat-unavailable);
   cursor: not-allowed;
 }
@@ -76,7 +95,7 @@
 }
 
 .botaoCompra {
-  background-color: var(--seat-selected);
+  background-color: #DB3D2E ;
   color: #FFFFFF;
   border: none;
   padding: 15px 30px;
@@ -84,19 +103,48 @@
   cursor: pointer;
   font-size: 1.2rem;
   text-align: center;
-  margin-top: 20px;
   transition: background-color 0.3s;
 }
 
-.botaoCompra:hover {
-  background-color: #DB3D2E;
-}
-
 .tela {
-  width: 80%;
+  width: 55%;
   height: 20px;
   background-color: #B0B0B0;
   text-align: center;
   margin: 10px auto;
   font-size: 0.9rem;
+}
+
+.legend {
+  display: flex;
+  gap: 20px; /* Espaçamento entre os itens */
+  align-items: center;
+  margin-top: 20px;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espaçamento entre a bolinha e o texto */
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.circle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.livre {
+  background-color: white;
+}
+
+.selecionado {
+  background-color: red;
+}
+
+.indisponivel {
+  background-color: gray;
 }

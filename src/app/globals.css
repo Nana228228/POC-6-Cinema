@@ -1,23 +1,21 @@
-:root {
-  --seat-selected: #CD4A3E;
-  --seat-unavailable: #505050;
-}
-
-/* Tema Claro */
 @media (prefers-color-scheme: light) {
   :root {
-    --background: #F5F5F5;
+    --background: #F0F0F0;
     --foreground: #1A1A24;
     --seat-available: #1A1A24;
+    --seat-selected: #DB3D2E;
+    --seat-unavailable: #BABABA;
+    
   }
 }
 
-/* Tema Escuro */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #1A1A24;
     --foreground: #F0F0F0;
     --seat-available: #F0F0F0;
+    --seat-selected: #DB3D2E;
+    --seat-unavailable: #505050;
   }
 }
 

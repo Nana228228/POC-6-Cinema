@@ -1,11 +1,11 @@
 export async function GET(request) {
     const filme = {
-            "titulo": "A Forja",
-            "sinopse": "Um ano depois de encerrar o ensino médio, o jovem Isaías Wright não tem planos para o futuro e é desafiado por sua mãe solo e um empresário de sucesso a começar a traçar um rumo melhor para sua vida. Ele passa a ser discipulado pelo seu novo mentor, conta com orações de sua mãe e de uma guerreira de orações, Dona Clara, e começa a descobrir o propósito de Deus para sua vida.",
-            "dataLancamento": "26 de setembro de 2024 (Brasil)",
-            "direcao": "Alex Kendrick",
-            "horario": "16:40",
-            "preco": 25.0,
+            "titulo": "Ilha do Medo",
+            "sinopse": "Em 1954, uma dupla de agentes federais investiga o desaparecimento de uma assassina que estava hospitalizada. Ao viajarem para Shutter Island - ilha localizada em Massachusetts - para cuidar do caso, eles enfrentam desde uma rebelião de presos a um furacão, ficando presos no local e emaranhados numa rede de intrigas.",
+            "dataLancamento": "13 de Fevereiro de 2010 (Mundial)",
+            "direcao": "Martin Scorsese",
+            "horario": "21:30",
+            "preco": 55.0,
             "assentos": [
               {
                 "numero": 1,
@@ -29,11 +29,11 @@ export async function GET(request) {
               },
               {
                 "numero": 6,
-                "disponivel": true
+                "disponivel": false
               },
               {
                 "numero": 7,
-                "disponivel": true
+                "disponivel": false
               },
               {
                 "numero": 8,
@@ -41,11 +41,11 @@ export async function GET(request) {
               },
               {
                 "numero": 9,
-                "disponivel": true
+                "disponivel": false
               },
               {
                 "numero": 10,
-                "disponivel": true
+                "disponivel": false
               },
               {
                 "numero": 11,
@@ -57,19 +57,19 @@ export async function GET(request) {
               },
               {
                 "numero": 13,
-                "disponivel": true
+                "disponivel": false
               },
               {
                 "numero": 14,
-                "disponivel": true
+                "disponivel": false
               },
               {
                 "numero": 15,
-                "disponivel": true
+                "disponivel": false
               },
               {
                 "numero": 16,
-                "disponivel": true
+                "disponivel": false
               },
               {
                 "numero": 17,

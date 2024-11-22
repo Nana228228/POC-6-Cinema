@@ -10,7 +10,7 @@ export default function BotaoCompra({ preco, totalSelecionados }) {
 
     return (
         <button onClick={handleCompra} className={styles.botaoCompra}>
-            Comprar - R$ {total.toFixed(2)}
+            Comprar R$ {total.toFixed(2)}
         </button>
     );
 }
