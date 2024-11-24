@@ -41,14 +41,14 @@ npm run dev
     ├── api
     │   └── filme
     │       └── route.js //Onde os dados do servidor JSON estão
-    ├── components //Pasta criada como boa prática para conter os componentes que serão explicados individualmente
+    ├── components   //Pasta criada como boa prática para conter os componentes que serão explicados individualmente
     │   ├── Assento.js 
     │   ├── BotaoCompra.js
     │   └── ListaDeAssentos.js
-    ├── globals.css //Arquivo CSS global que define estilos comuns aplicados a toda a aplicação.
-    ├── layout.js //Estrutura base da aplicação, normalmente usada para configurar a aparência geral e o layout persistente.
-    ├── page.js // Página principal ou inicial da aplicação, contendo o conteúdo ou a lógica inicial.
-    └── page.module.css //Arquivo de estilos específicos para a página principal
+    ├── globals.css   //Arquivo CSS global que define estilos comuns aplicados a toda a aplicação.
+    ├── layout.js   //Estrutura base da aplicação, normalmente usada para configurar a aparência geral e o layout persistente.
+    ├── page.js   // Página principal ou inicial da aplicação, contendo o conteúdo ou a lógica inicial.
+    └── page.module.css   //Arquivo de estilos específicos para a página principal
   
 </pre>
 <h2 id="Assento.js">Assento.js</h2>
