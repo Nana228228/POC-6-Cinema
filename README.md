@@ -278,13 +278,170 @@ Props:
 `className`: Classe CSS para estilização.
 
 
+<h1>CSS:</h1>
+
+<h2>Estrutura do CSS:</h2>
+
+<ul>
+<li>page.module.css: Contém os estilos específicos das páginas, organizados por componentes.</li>
+<li>globals.css: Define estilos globais e temas dinâmicos (claro e escuro).</li>
+<li>layout.js: Define o layout e os metadados básicos da aplicação.</li>
+</ul>
+
+<h1>1. page.module.css</h1>
+<p>Este arquivo organiza o layout e o estilo visual das páginas. Cada classe é modular e usada para controlar áreas específicas do aplicativo.</p>
+
+<h2>.container:</h2>
+
+````
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+`````
+<ul>>
+<li>Define o contêiner como flexível para que os elementos se alinhem verticalmente.</li>
+<li>Centraliza o conteúdo horizontalmente com margens automáticas.</li>
+<li>Adiciona padding interno para espaçamento.</li>
+<li>Limita a largura máxima a 1200px para melhor exibição em telas grandes.</li>
+</ul>
+
+<h2>.article</h2>
+
+```
+
+.article {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin: 0;
+  margin-bottom: 50px;
+}
+```
+<p>Usada para organizar seções com múltiplos elementos.
+
+Alinha o conteúdo horizontalmente usando justify-content: space-between.
+Permite que cada elemento interno tenha um espaço flexível (gap: 20px).</p>
+
+<h2>.assentosContainer e .infoSection</h2>
+<p>Dividem o espaço em áreas distintas:
+
+.assentosContainer: Para o grid de assentos. Centraliza elementos e organiza verticalmente.
+.infoSection: Configura uma seção lateral para informações com margem ajustada.</p>
+
+<h2>Assentos:<h2/>
+
+<h2>.grid</h2>
+<p>Configura um layout de grid para organizar assentos em 8 colunas.
+
+Utiliza grid-template-columns para distribuir colunas uniformemente.
+Define um espaçamento entre os itens (gap: 10px).</p>
+
+<h2>.assento</h2>
+<p>Representa um assento com:
+
+Tamanho fixo (28px x 28px).
+Bordas arredondadas para um estilo mais agradável.
+Cor dinâmica baseada em variáveis CSS (--seat-available, --seat-selected, etc.).
+Transições suaves para alterações de estado (selecionado, indisponível).</P>
+
+<h2.Classes Adicionais:</h2>
+
+<p>.assento.selecionado: Cor diferente para assentos selecionados.
+.assento.indisponivel: Bloqueia interação e muda a cor para indicar indisponibilidade.</p>
+
+<h1>2. globals.css</h1>
+<p>Define estilos globais e suporte de media queries a temas claro e escuro.</p>
+
+```
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #F0F0F0;
+    --foreground: #1A1A24;
+    --seat-available: #1A1A24;
+    --seat-selected: #DB3D2E;
+    --seat-unavailable: #BABABA;
+    
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1A1A24;
+    --foreground: #F0F0F0;
+    --seat-available: #F0F0F0;
+    --seat-selected: #DB3D2E;
+    --seat-unavailable: #505050;
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+```
+
+<h1>3. layout.js</h1>
+<p>Configura o layout principal da aplicação.</p>
+
+<p>Define os dados:
+title: Nome do aplicativo, "Cinema App".
+description: Breve descrição: "Aplicativo de cinema".
+Renderiza o layout:
+Envolve o conteúdo da aplicação em tags HTML básicas.
+Define a linguagem padrão como pt-BR.</p>
+
+```
+import "./globals.css";
+
+export const metadata = {
+  title: "Cinema App",
+  description: "Aplicativo de cinema",
+};
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="pt-BR">
+      <body>{children}</body>
+    </html>
+  );
+}
+````
+
+<h2 id="autores"> Autores </h2>
+
+<h3>Naomi Arakaki</h3>
 
 
 
+[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/naomi-suguimoto-57436b290/)](https://www.linkedin.com/in/naomi-suguimoto-57436b290)
+
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white&link=mailto:arakakinaomi228@gmail.com)](mailto:arakakinaomi228@gmail.com)
 
 
+<h3>Gabriel Aboboreira</h3>
 
 
+[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/gabriel-aboboreira/)](https://www.linkedin.com/in/gabriel-aboboreira/)
+
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white&link=mailto:masterkillbr007@gmail.com)](mailto:masterkillbr007@gmail.com)
+
+
+<h3>Ana Julia Blande</h3>
+
+[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/ana-julia-blande-silva-348612286/)](https://www.linkedin.com/in/ana-julia-blande-silva-348612286/)
+
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white&link=mailto:anajblande04@gmail.com)](mailto:anajblande04@gmail.com)
 
 
 
