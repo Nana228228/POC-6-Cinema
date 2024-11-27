@@ -414,6 +414,8 @@ export default function RootLayout({ children }) {
 }
 ````
 
+<h1>Imagens de execução:</h1>
+
 <h2 id="autores"> Autores </h2>
 
 <h3>Naomi Arakaki</h3>
