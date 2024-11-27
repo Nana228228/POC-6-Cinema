@@ -416,10 +416,10 @@ export default function RootLayout({ children }) {
 
 <h1>Imagens da execução:</h1>
 
-<img style="border-radius:50%;width=300px; height:430px; display: flex; align-items: center; " src="PHOTO-2024-11-21-11-32-18.jpg”>
 
-<img style="border-radius:50%;width=300px; height:430px; display: flex; align-items: center; " src="PHOTO-2024-11-21-11-32-18.jpg”>
+<img src="PHOTO-2024-11-21-11-32-18.jpg" alt="Descrição da imagem" style="max-width:100%; height:auto;">
 
+<img src="PHOTO-2024-11-19-10-18-37.jpg" alt="Descrição da imagem" style="max-width:100%; height:auto;">
 <h2 id="autores"> Autores </h2>
 
 <h3>Naomi Arakaki</h3>
