@@ -386,6 +386,7 @@ body {
 }
 
 ```
+O código é desktop-first. A versão mobile usa @media (max-width: 768px) { *código adaptado para mobile* }
 
 <h1>3. layout.js</h1>
 <p>Configura o layout principal da aplicação.</p>
