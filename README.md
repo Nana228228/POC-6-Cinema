@@ -418,6 +418,8 @@ export default function RootLayout({ children }) {
 
 <img style="border-radius:50%;width=300px; height:430px; display: flex; align-items: center; " src="PHOTO-2024-11-21-11-32-18.jpg”>
 
+<img style="border-radius:50%;width=300px; height:430px; display: flex; align-items: center; " src="PHOTO-2024-11-21-11-32-18.jpg”>
+
 <h2 id="autores"> Autores </h2>
 
 <h3>Naomi Arakaki</h3>
