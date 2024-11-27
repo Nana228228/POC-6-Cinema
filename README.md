@@ -266,7 +266,7 @@ assentos: A lista de assentos obtida da API.
 selecionarAssento: Função para lidar com a seleção de assentos.
 selecionados: Lista de assentos atualmente selecionados.
 
-
+<p id="styles"></p>
 `BotaoCompra`: Componente para confirmar a compra dos assentos.
 Props:
 `preco`: Preço do ingresso, obtido dos dados do filme.
