@@ -15,9 +15,10 @@
 
 
 <h2 id="introducao">Introdução</h2>
-Nessa POC, os conceitos aprendidos até aqui de React e recursos  de desenvolvimento web serão colocados em prática no desenvolvimento de uma interface de reserva de assentos de cinema. Para ver o enunciado completo, acesse: 
-https://bragafilho.craft.me/CZ5uesfSq3ICAe.
-Explicaremos as técnicas usadas com anotação do código, dividindo-o em partes compreensíveis e detalhando sua semântica. 
+Nessa POC, os conceitos aprendidos até aqui de React e recursos de desenvolvimento web serão colocados em prática no desenvolvimento de uma interface de reserva de assentos de cinema. 
+Explicaremos as técnicas usadas com anotação do código, dividindo-o em partes compreensíveis e detalhando sua semântica. O resultado final:
+
+<img src="PHOTO-2024-11-19-10-18-37.jpg" alt="Descrição da imagem" style="max-width:100%; height:auto;">
 
 
 <h2 id="comecando">Começando o projeto</h2>
@@ -415,12 +416,6 @@ export default function RootLayout({ children }) {
 }
 ````
 
-<h1>Imagens da execução:</h1>
-
-
-<img src="PHOTO-2024-11-21-11-32-18.jpg" alt="Descrição da imagem" style="max-width:100%; height:auto;">
-
-<img src="PHOTO-2024-11-19-10-18-37.jpg" alt="Descrição da imagem" style="max-width:100%; height:auto;">
 <h2 id="autores"> Autores </h2>
 
 <h3>Naomi Arakaki</h3>
