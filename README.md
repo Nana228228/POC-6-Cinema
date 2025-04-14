@@ -18,7 +18,7 @@
 Nessa POC (proof of concept), os conceitos aprendidos até aqui de React e recursos de desenvolvimento web serão colocados em prática no desenvolvimento de uma interface de reserva de assentos de cinema. 
 Ensinaremos a criar o projeto do 0 expliacando as técnicas usadas com anotação do código, dividindo-o em partes compreensíveis e detalhando sua semântica. O resultado final: 
 <br>
-
+<br>
 <img src="resultado.png" alt="Imagem do resultado" style="max-width:100; height:auto;">
 
 
